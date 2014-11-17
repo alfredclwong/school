@@ -20,7 +20,7 @@ public class Election implements ActionListener {
       w = new JButton("Reset");
   static final Election x = new Election();
   static Scanner y;
-  public static void main(String[] args) {
+  public static void main(String[] z) {
     n.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     n.setContentPane(Election.o);
     y = new Scanner(System.in);
@@ -45,8 +45,8 @@ public class Election implements ActionListener {
     n.pack();
     n.setVisible(true);
   }
-  @Override public void actionPerformed(ActionEvent z) {
-    if (z.getSource() == w) {
+  @Override public void actionPerformed(ActionEvent ae) {
+    if (ae.getSource() == w) {
       b = 0;
       for (int i = 0; i < a; i++) {
         u[i].setText(l[i]);
@@ -54,7 +54,7 @@ public class Election implements ActionListener {
       }
       t.setText(h);
       d = new int[a][a];
-    } else if (z.getSource() == v) {
+    } else if (ae.getSource() == v) {
       n.dispose();
       for (int i = 0; i < a * a; i++)
         e[i % a] += c[i / a][i % a] * -(i / a + 1);
@@ -78,7 +78,7 @@ public class Election implements ActionListener {
         e = c[i];
       }
     } else for (int i = 0; i < a; i++)
-      if (z.getSource() == u[i] && i >= b) {
+      if (ae.getSource() == u[i] && i >= b) {
         m = u[b].getText();
         u[b].setText(u[i].getText());
         u[b].setBackground(g);
